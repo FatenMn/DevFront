@@ -1,0 +1,22 @@
+<div class="col-md-6 col-lg-7 d-flex align-items-center">
+    <div class="card-body p-4 p-lg-5 text-black">
+        <div class="container">
+            <h1>Ajouter un procès-verbal</h1>
+            <div class="row mt-5">
+                <label>Action : </label>
+                <div class="col-5">
+                    <input [(ngModel)]="pv.action" type="text" class="form-control m-1" placeholder="action">
+                </div>
+                <div class="row mt-5">
+                    <label>Date : </label>
+                    <div class="col-5">
+                        <input [(ngModel)]="pv.date_pv" type="date" class="form-control m-1" placeholder="date">
+                    </div>
+                    <div class="row mt-5">
+                        <label>title : </label>
+                        <div class="col-5">
+                            <input [(ngModel)]="pv.title" type="text" class="form-control m-1" placeholder="title">
+                        </div>
+
+                        <button (click)="ajout()" routerLink="/listepv">Ajouter</button>
+                    </div>

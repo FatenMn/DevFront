@@ -1,0 +1,51 @@
+<app-entete></app-entete>
+<app-header></app-header>
+<div class="container col-md-7">
+    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+        <div class="card-body p-4 p-lg-5 text-black">
+            <div class="container">
+            </div>
+
+            <body>
+
+
+                <main>
+                    <section>
+                        <h2>Gestion du profil</h2>
+                        <div class="profil-avatar">
+                            <!-- Afficher l'avatar de l'utilisateur -->
+                            <img src="assets/img/avatar.png" alt="Avatar de l'utilisateur">
+                            <!-- Permettre à l'utilisateur de modifier son avatar -->
+                            <input type="file" accept="assets/img/*">
+                        </div>
+                        <div class="profil-info">
+                            <h5>Informations personnelles</h5>
+                            <!-- Afficher les informations personnelles de l'utilisateur -->
+                            <p>Nom: John Doe</p>
+                            <p>Email: john.doe@example.com</p>
+                            <!-- Ajouter d'autres informations selon les besoins -->
+                        </div>
+
+
+
+                        <div class="profil-motdepasse">
+                            <h5>Changer de mot de passe</h5>
+                            <!-- Formulaire pour changer de mot de passe -->
+                            <form>
+                                <label for="ancien-motdepasse">Ancien mot de passe:</label>
+                                <input type="password" id="ancien-motdepasse">
+
+                                <label for="nouveau-motdepasse">Nouveau mot de passe:</label>
+                                <input type="password" id="nouveau-motdepasse">
+
+                                <label for="confirmation-motdepasse">Confirmer le nouveau mot de passe:</label>
+                                <input type="password" id="confirmation-motdepasse">
+
+                                <button type="submit">Changer le mot de passe</button>
+                            </form>
+                        </div>
+                    </section>
+                </main>
+
+
+            </body>

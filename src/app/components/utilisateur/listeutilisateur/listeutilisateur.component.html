@@ -1,0 +1,61 @@
+<app-entete></app-entete>
+<div class="container col-md-7">
+
+    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+        <div class="card-body p-4 p-lg-5 text-black">
+            <div class="container">
+
+            </div>
+
+
+            <div class="container">
+                <h5>Liste utilisateur</h5>
+                <table class="table table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Email</th>
+                            <th>Mot_de_passe</th>
+                            <th>Téléphone</th>
+                            <th>Photo</th>
+                            <th>CIN</th>
+                            <th>Adresse</th>
+                            <th>Rôle</th>
+                            <th>Réunion</th>
+                            <th>PV</th>
+
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of utilisateurs.data">
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.nom }}</td>
+                            <td>{{ user.prenom }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.motdepasse }}</td>
+                            <td>{{user.telephone }}</td>
+                            <td>{{ user.photo }}</td>
+                            <td> {{ user.cin }}</td>
+                            <td>{{ user.adresse }}</td>
+                            <td>{{ user.role }}</td>
+                            <td>{{ user.reunion }}</td>
+                            <td>{{ user.pv }}</td>
+
+                            <!--<td><button class="btn btn-primary">Modifier</button></td>-->
+
+                            <td><button class="btn btn-primary" class="btn btn-danger">Disactiver</button></td>
+                            <td><button class="btn btn-primary">Activer</button></td>
+                            <td>
+                                <button (click)="delete(user.id)" class="fas fa-pancil-alt"
+                                    class="btn btn-danger">Supprimer</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button routerLink="/ajoututilisateur" class="btn btn-primary">Ajouter Utilisateur</button>
+            </div>
+
+            <!-- <button routerLink="/ajoututilisateur"></button>-->
+            <app-header></app-header>

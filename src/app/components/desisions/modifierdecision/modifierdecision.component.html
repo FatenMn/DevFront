@@ -1,0 +1,26 @@
+<app-entete></app-entete>
+<div class="container col-md-7">
+    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+        <div class="card-body p-4 p-lg-5 text-black">
+            <div class="container">
+            </div>
+            <div class="row mt-15">
+                <h5>Modifier Decision</h5>
+                <label>Contenu : </label>
+                <div class="col-15">
+                    <input [(ngModel)]="decision.content" type="text" class="form-control m-1" placeholder="decision">
+                </div>
+            </div>
+            <div class="row mt-15">
+                <label>Texte : </label>
+                <div class="col-15">
+                    <input [(ngModel)]="decision.texte" type="text" class="form-control m-1" placeholder="decision">
+                </div>
+                <!-- <div class="row mt-15">
+        <label>ID_PV : </label>
+        <div class="col-15">
+            <input [(ngModel)]="decision.id_pv" type="number" class="form-control m-1" placeholder="decision">
+        </div>-->
+            </div>
+            <button (click)="modifier()" routerLink="/listedecision">Modifier</button>
+            <app-header></app-header>

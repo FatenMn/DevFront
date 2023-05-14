@@ -1,0 +1,37 @@
+<app-entete></app-entete>
+<app-header></app-header>
+<div class="container col-md-7">
+    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+        <div class="card-body p-4 p-lg-5 text-black">
+            <div class="container">
+            </div>
+            <div class="container">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID_Décision</th>
+                            <th>Contenu</th>
+                            <th>Texte</th>
+                            <th>ID_PV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let decision of decisions?.data">
+                            <td>{{ decision.id_decision }}</td>
+                            <td>{{ decision.content }}</td>
+                            <td>{{ decision.texte }}</td>
+                            <td>{{ decision.id_pv }}</td>
+
+                            <td><button routerLink="/modifierdecision/{{decision.id}} ">Modifier</button>
+                            </td>
+                            <td><button (click)="delete(decision.id)" class="fas fa-pancil-alt"
+                                    class="btn btn-danger">Supprimer</button></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <button routerLink="/ajoutdecision" class="btn btn-primary">Ajouter Décision</button>
+            </div>
+        </div>
+    </div>
+</div>

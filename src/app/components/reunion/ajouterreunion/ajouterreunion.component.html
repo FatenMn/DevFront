@@ -1,0 +1,52 @@
+<app-entete></app-entete>
+<div class="container col-md-7">
+
+    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+        <div class="card-body p-4 p-lg-5 text-black">
+            <div class="container">
+
+            </div>
+
+            <div class="container">
+                <h5>Ajouter une réunion</h5>
+                <div class="row mt-15">
+                    <label>date: </label>
+                    <div class="col-15">
+                        <input [(ngModel)]="reunion.datereunion" type="date" class="form-control m-1"
+                            placeholder="sujet">
+                    </div>
+                    <div class="row mt-15">
+                        <label>statut : </label>
+                        <div class="col-15">
+                            <input [(ngModel)]="reunion.statut" type="text" class="form-control m-1"
+                                placeholder="sujet">
+                        </div>
+                        <div class="row mt-15">
+                            <label>heuredebut : </label>
+                            <div class="col-15">
+                                <input [(ngModel)]="reunion.heuredebut" type="text" class="form-control m-1"
+                                    placeholder="sujet">
+                            </div>
+
+                        </div>
+
+
+                        <div class="row mt-15">
+                            <label>heurefin: </label>
+                            <div class="col-15">
+                                <input [(ngModel)]="reunion.heurefin" type="text" class="form-control m-1"
+                                    placeholder="sujet">
+                            </div>
+
+                            <div class="row mt-15">
+                                <label>sujet : </label>
+                                <div class="col-15">
+                                    <input [(ngModel)]="reunion.sujet" type="text" class="form-control m-1"
+                                        placeholder="sujet">
+                                </div>
+                                <button (click)="ajout()" routerLink="/listereunion"
+                                    class="btn btn-primary">Ajouter</button>
+                            </div>
+
+
+                            <app-header></app-header>

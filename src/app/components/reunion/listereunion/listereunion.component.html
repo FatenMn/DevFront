@@ -1,0 +1,51 @@
+<app-entete></app-entete>
+<app-header></app-header>
+
+
+
+
+
+
+
+
+<div class="container col-md-7">
+    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+        <div class="card-body p-4 p-lg-5 text-black">
+            <div class="container">
+            </div>
+            <div class="container">
+                <h5>Liste Reunion</h5>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID_Réunion</th>
+                            <th>Date_Réunion</th>
+                            <th>Heure Début</th>
+                            <th>Heure Fin</th>
+                            <th>Statut</th>
+                            <th>Sujet</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let reunion of reunions?.data">
+                            <td>{{ reunion.id_reunion }}</td>
+                            <td>{{ reunion.datereunion |date }}</td>
+                            <td>{{ reunion.heuredebut }}</td>
+                            <td>{{ reunion.heurefin }}</td>
+                            <td>{{ reunion.statut }}</td>
+                            <td>{{ reunion.sujet }}</td>
+                            <td><button [routerLink]="['/modifierreunion', reunion.id]">Modifier</button>
+                            </td>
+                            <td><button (click)="delete(reunion.id)" class="fas fa-pancil-alt"
+                                    class="btn btn-danger">Supprimer</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button routerLink="/ajoutreunion" class="btn btn-primary">Ajouter Réunion</button>
+            </div>
+            <app-header></app-header>
+        </div>
+    </div>
+</div>

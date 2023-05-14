@@ -1,0 +1,67 @@
+<app-entete></app-entete>
+<div class="container col-md-7">
+    <h1>Ajouter un utilisateur</h1>
+    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+        <div class="card-body p-4 p-lg-5 text-black">
+            <div class="container">
+
+            </div>
+
+
+            <div class="row mt-5">
+                <label>Nom : </label>
+                <div class="col-15">
+                    <input [(ngModel)]="utilisateur.nom" type="text" class="form-control m-1" placeholder="nom">
+                </div>
+            </div>
+
+            <div class="row mt-7">
+                <label>Prenom :</label>
+                <div class="col-15">
+                    <input [(ngModel)]="utilisateur.prenom" type="text" class="form-control m-1" placeholder="prenom">
+                </div>
+            </div>
+            <label for="role">Rôle :</label>
+            <select [(ngModel)]="utilisateur.role" name="role" id="role">
+                <option value="">Sélectionnez un rôle</option>
+                <option *ngFor="let role of roles" [value]="role">{{role}}</option>
+            </select>
+
+
+
+
+
+
+
+            <div class="row mt-7">
+                <label>cin utlilisateur :</label>
+                <div class="col-15">
+                    <input [(ngModel)]="utilisateur.cin" type="number" class="form-control m-1" placeholder="cin">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <label>Email : </label>
+                <div class="col-15">
+                    <input [(ngModel)]="utilisateur.email" type="text" class="form-control m-1" placeholder="email">
+                </div>
+            </div>
+
+            <div class="row mt-15">
+                <label>Telephone :</label>
+                <div class="col-15">
+                    <input [(ngModel)]="utilisateur.telephone" type="number" class="form-control m-1"
+                        placeholder="telephone">
+                </div>
+            </div>
+
+            <div class="row mt-15">
+                <label>mot de passe </label>
+                <div class="col-5">
+                    <input [(ngModel)]="utilisateur.motdepasse" type="password" class="form-control m-1"
+                        placeholder="mot de passe">
+                </div>
+                <button (click)="ajout()" routerLink="/listeutilisateur">Ajouter</button>
+
+            </div>
+            <app-header></app-header>

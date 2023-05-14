@@ -1,0 +1,39 @@
+<app-entete></app-entete>
+<app-header></app-header>
+<div class="container col-md-7">
+    <div class="card-body p-4 p-lg-5 text-black">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID_PV</th>
+                    <th>Action</th>
+                    <th>Date_PV</th>
+                    <th>Title</th>
+                    <th>ID_User</th>
+                    <th>ID_Réunion</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of pvs.data">
+                    <td>{{ item.id_pv }}</td>
+                    <td>{{ item.action }}</td>
+                    <td>{{ item.date_pv|date }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.id_user }}</td>
+                    <td>{{ item.id_reunion }}</td>
+                    <td><button routerLink="/modifierpv/{{item.id}} ">Modifier</button></td>
+                    <td><button (click)="delete(item.id)" class="fas fa-pancil-alt"
+                            class="btn btn-danger">Supprimer</button></td>
+
+                    <!--
+                    <td><button [routerLink]="['/profil', item.id_pv]">Modifier</button></td>-->
+                </tr>
+            </tbody>
+        </table>
+        <button routerLink="/ajoutpv" class="btn btn-primary">Ajouter pv</button>
+
+    </div>
+
+
+</div>
